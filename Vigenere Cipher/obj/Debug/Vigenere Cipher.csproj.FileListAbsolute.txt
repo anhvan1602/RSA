@@ -1,0 +1,10 @@
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\bin\Debug\Vigenere Cipher.exe.config
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\bin\Debug\Vigenere Cipher.exe
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\bin\Debug\Vigenere Cipher.pdb
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere Cipher.csproj.AssemblyReference.cache
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere_Cipher.Form1.resources
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere_Cipher.Properties.Resources.resources
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere Cipher.csproj.GenerateResource.cache
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere Cipher.csproj.CoreCompileInputs.cache
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere Cipher.exe
+E:\Project Lap Trinh\C#\Vigenere-Cipher\Vigenere Cipher\obj\Debug\Vigenere Cipher.pdb
