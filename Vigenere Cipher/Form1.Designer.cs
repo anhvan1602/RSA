@@ -86,6 +86,7 @@ namespace Vigenere_Cipher
             this.label10 = new System.Windows.Forms.Label();
             this.rd_tc = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -110,10 +111,10 @@ namespace Vigenere_Cipher
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(117, 51);
+            this.panel1.Location = new System.Drawing.Point(35, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 332);
+            this.panel1.Size = new System.Drawing.Size(401, 318);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -221,10 +222,10 @@ namespace Vigenere_Cipher
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.panel2.Location = new System.Drawing.Point(589, 51);
+            this.panel2.Location = new System.Drawing.Point(507, 65);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(395, 332);
+            this.panel2.Size = new System.Drawing.Size(376, 318);
             this.panel2.TabIndex = 1;
             // 
             // button2
@@ -322,7 +323,7 @@ namespace Vigenere_Cipher
             // 
             this.button3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(543, 565);
+            this.button3.Location = new System.Drawing.Point(854, 551);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 32);
@@ -335,11 +336,13 @@ namespace Vigenere_Cipher
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 18);
             this.tabControl1.Location = new System.Drawing.Point(12, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1100, 526);
+            this.tabControl1.Size = new System.Drawing.Size(950, 526);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 15;
             // 
@@ -351,7 +354,7 @@ namespace Vigenere_Cipher
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1092, 500);
+            this.tabPage1.Size = new System.Drawing.Size(942, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -364,7 +367,7 @@ namespace Vigenere_Cipher
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1092, 500);
+            this.tabPage2.Size = new System.Drawing.Size(942, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -383,14 +386,14 @@ namespace Vigenere_Cipher
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(302, 9);
+            this.panel3.Location = new System.Drawing.Point(290, 9);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 485);
+            this.panel3.Size = new System.Drawing.Size(638, 485);
             this.panel3.TabIndex = 7;
             // 
             // tbx_BangGiaiMa
             // 
-            this.tbx_BangGiaiMa.Location = new System.Drawing.Point(423, 253);
+            this.tbx_BangGiaiMa.Location = new System.Drawing.Point(348, 253);
             this.tbx_BangGiaiMa.Multiline = true;
             this.tbx_BangGiaiMa.Name = "tbx_BangGiaiMa";
             this.tbx_BangGiaiMa.Size = new System.Drawing.Size(260, 92);
@@ -398,7 +401,7 @@ namespace Vigenere_Cipher
             // 
             // tbx_BangMaHoa1
             // 
-            this.tbx_BangMaHoa1.Location = new System.Drawing.Point(55, 253);
+            this.tbx_BangMaHoa1.Location = new System.Drawing.Point(29, 253);
             this.tbx_BangMaHoa1.Multiline = true;
             this.tbx_BangMaHoa1.Name = "tbx_BangMaHoa1";
             this.tbx_BangMaHoa1.Size = new System.Drawing.Size(260, 92);
@@ -406,7 +409,7 @@ namespace Vigenere_Cipher
             // 
             // tbx_BangMaHoa2
             // 
-            this.tbx_BangMaHoa2.Location = new System.Drawing.Point(423, 80);
+            this.tbx_BangMaHoa2.Location = new System.Drawing.Point(348, 80);
             this.tbx_BangMaHoa2.Multiline = true;
             this.tbx_BangMaHoa2.Name = "tbx_BangMaHoa2";
             this.tbx_BangMaHoa2.Size = new System.Drawing.Size(260, 101);
@@ -414,7 +417,7 @@ namespace Vigenere_Cipher
             // 
             // tbx_BangRo
             // 
-            this.tbx_BangRo.Location = new System.Drawing.Point(55, 80);
+            this.tbx_BangRo.Location = new System.Drawing.Point(29, 80);
             this.tbx_BangRo.Multiline = true;
             this.tbx_BangRo.Name = "tbx_BangRo";
             this.tbx_BangRo.Size = new System.Drawing.Size(260, 101);
@@ -422,7 +425,7 @@ namespace Vigenere_Cipher
             // 
             // btn_GiaiMa
             // 
-            this.btn_GiaiMa.Location = new System.Drawing.Point(423, 384);
+            this.btn_GiaiMa.Location = new System.Drawing.Point(348, 384);
             this.btn_GiaiMa.Name = "btn_GiaiMa";
             this.btn_GiaiMa.Size = new System.Drawing.Size(260, 53);
             this.btn_GiaiMa.TabIndex = 8;
@@ -432,7 +435,7 @@ namespace Vigenere_Cipher
             // 
             // btn_MaHoa
             // 
-            this.btn_MaHoa.Location = new System.Drawing.Point(52, 384);
+            this.btn_MaHoa.Location = new System.Drawing.Point(26, 384);
             this.btn_MaHoa.Name = "btn_MaHoa";
             this.btn_MaHoa.Size = new System.Drawing.Size(263, 53);
             this.btn_MaHoa.TabIndex = 8;
@@ -444,7 +447,7 @@ namespace Vigenere_Cipher
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(420, 218);
+            this.label20.Location = new System.Drawing.Point(345, 218);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(85, 18);
             this.label20.TabIndex = 2;
@@ -455,7 +458,7 @@ namespace Vigenere_Cipher
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(49, 218);
+            this.label18.Location = new System.Drawing.Point(23, 218);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(88, 18);
             this.label18.TabIndex = 2;
@@ -466,7 +469,7 @@ namespace Vigenere_Cipher
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(420, 51);
+            this.label19.Location = new System.Drawing.Point(345, 51);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(88, 18);
             this.label19.TabIndex = 2;
@@ -477,7 +480,7 @@ namespace Vigenere_Cipher
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(49, 51);
+            this.label17.Location = new System.Drawing.Point(23, 51);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 18);
             this.label17.TabIndex = 2;
@@ -488,7 +491,7 @@ namespace Vigenere_Cipher
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(48, 19);
+            this.label15.Location = new System.Drawing.Point(22, 19);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 6;
@@ -498,7 +501,7 @@ namespace Vigenere_Cipher
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(419, 19);
+            this.label16.Location = new System.Drawing.Point(344, 19);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 20);
             this.label16.TabIndex = 6;
@@ -552,7 +555,7 @@ namespace Vigenere_Cipher
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(6, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(278, 485);
+            this.groupBox1.Size = new System.Drawing.Size(272, 485);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo khóa";
@@ -740,12 +743,21 @@ namespace Vigenere_Cipher
             this.label9.Text = "p = ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(942, 500);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1138, 626);
+            this.ClientSize = new System.Drawing.Size(963, 591);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -833,6 +845,7 @@ namespace Vigenere_Cipher
         private System.Windows.Forms.TextBox tbx_BangRo;
         private System.Windows.Forms.Button btn_ExportKey;
         private System.Windows.Forms.Button btn_OpenKey;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
