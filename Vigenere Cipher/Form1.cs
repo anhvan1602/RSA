@@ -444,6 +444,16 @@ namespace Vigenere_Cipher
             
         }
 
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // "Hàm kiểm tra hai số nguyên tố cùng nhau"
         private bool nguyenToCungNhau(int ai, int bi)
         {

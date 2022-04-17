@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>STT	MSSV	               Họ Và Tên
+1	4501104126	Phạm Thị Linh	
+2	4501104251	Trần Quỳnh Trâm	
+3	4501104275	Nguyễn Thị Ánh Vân    
+4	4501104230	Huỳnh Lưu Vĩnh Thuận	
+5	4501104010	Phạm Hồng Anh	         
+6	44.01.104.083	Đỗ Thanh Hậu</value>
+  </data>
 </root>
