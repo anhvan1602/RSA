@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text;
+
 namespace Vigenere_Cipher
 {
     public partial class Form1 : Form
@@ -19,7 +20,8 @@ namespace Vigenere_Cipher
             rd_nn.Checked = true;
             btn_Reset.Enabled = false;
         }
-
+        SaveFileDialog save;
+        OpenFileDialog open;
         //encryption function
 
         public class Vigernere
@@ -393,19 +395,55 @@ namespace Vigenere_Cipher
 
         private void btn_SaveKey_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "TXT file|*.txt";
-            saveFileDialog1.Title = "Save an Image File";
-            saveFileDialog1.ShowDialog();
-
-            // If the file name is not an empty string open it for saving.
-            if (saveFileDialog1.FileName != "")
+            save = new SaveFileDialog();
+            save.Filter = "TXT File |*.txt";
+            save.RestoreDirectory = true;
+            save.ShowDialog();
+            if (save.FileName != "")
             {
-                // Saves the Image via a FileStream created by the OpenFile method.
-                System.IO.FileStream fs =
-                    (System.IO.FileStream)saveFileDialog1.OpenFile();
+                StreamWriter write = new StreamWriter(save.FileName);
+                string[] line = { tbx_phiN.Text, tbx_n.Text, tbx_e.Text, tbx_d.Text };
+                string lines =  tbx_phiN.Text+"\n"+tbx_n.Text+"\n" + tbx_e.Text+"\n" + tbx_d.Text;
+                write.WriteLine(lines);
+                write.Close();
             }
+            
         }
+
+        private void btn_OpenKey_Click(object sender, EventArgs e)
+        {
+            btn_Reset.Enabled = true;
+            btn_createKey.Enabled = true;
+            rd_nn.Enabled = false;
+            rd_tc.Enabled = true;
+            rd_nn.Checked = false;
+            rd_tc.Checked = true;
+            tbx_p.Text = tbx_q.Text = tbx_phiN.Text = tbx_n.Text = tbx_e.Text = tbx_d.Text = string.Empty;
+            tbx_BangRo.Text = tbx_BangMaHoa1.Text = tbx_BangMaHoa2.Text = tbx_BangGiaiMa.Text = string.Empty;
+            RSA_d_dau = 1;
+            open = new OpenFileDialog();
+            open.Filter = "TXT File |*.txt";
+            open.ShowDialog();
+            if (open.FileName != "")
+            {
+                StreamReader read = new StreamReader(open.FileName);
+                tbx_phiN.Text = read.ReadLine();
+                tbx_n.Text = read.ReadLine();
+                tbx_e.Text = read.ReadLine();
+                tbx_d.Text = read.ReadLine();
+                RSA_soPhi_n = Int32.Parse(tbx_phiN.Text);
+                RSA_soN = Int32.Parse(tbx_n.Text);
+                RSA_soE = Int32.Parse(tbx_e.Text);
+                RSA_soD = Int32.Parse(tbx_d.Text);
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         // "Hàm kiểm tra hai số nguyên tố cùng nhau"
         private bool nguyenToCungNhau(int ai, int bi)
         {

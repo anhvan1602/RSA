@@ -57,8 +57,6 @@ namespace Vigenere_Cipher
             this.tbx_BangMaHoa2 = new System.Windows.Forms.TextBox();
             this.tbx_BangRo = new System.Windows.Forms.TextBox();
             this.btn_GiaiMa = new System.Windows.Forms.Button();
-            this.btn_Reset = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
             this.btn_MaHoa = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -70,6 +68,10 @@ namespace Vigenere_Cipher
             this.tbx_d = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_OpenKey = new System.Windows.Forms.Button();
+            this.btn_ExportKey = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
             this.tbx_phiN = new System.Windows.Forms.TextBox();
             this.tbx_q = new System.Windows.Forms.TextBox();
             this.tbx_p = new System.Windows.Forms.TextBox();
@@ -84,8 +86,6 @@ namespace Vigenere_Cipher
             this.label10 = new System.Windows.Forms.Label();
             this.rd_tc = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_ExportKey = new System.Windows.Forms.Button();
-            this.btn_ImportKey = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -351,7 +351,7 @@ namespace Vigenere_Cipher
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1092, 442);
+            this.tabPage1.Size = new System.Drawing.Size(1092, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -429,26 +429,6 @@ namespace Vigenere_Cipher
             this.btn_GiaiMa.Text = "Giải mã";
             this.btn_GiaiMa.UseVisualStyleBackColor = true;
             this.btn_GiaiMa.Click += new System.EventHandler(this.btn_GiaiMa_Click);
-            // 
-            // btn_Reset
-            // 
-            this.btn_Reset.Location = new System.Drawing.Point(144, 429);
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(128, 41);
-            this.btn_Reset.TabIndex = 8;
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.UseVisualStyleBackColor = true;
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
-            // 
-            // btn_New
-            // 
-            this.btn_New.Location = new System.Drawing.Point(6, 429);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(132, 41);
-            this.btn_New.TabIndex = 8;
-            this.btn_New.Text = "New";
-            this.btn_New.UseVisualStyleBackColor = true;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // btn_MaHoa
             // 
@@ -556,7 +536,7 @@ namespace Vigenere_Cipher
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_ImportKey);
+            this.groupBox1.Controls.Add(this.btn_OpenKey);
             this.groupBox1.Controls.Add(this.btn_ExportKey);
             this.groupBox1.Controls.Add(this.btn_Reset);
             this.groupBox1.Controls.Add(this.btn_New);
@@ -576,6 +556,47 @@ namespace Vigenere_Cipher
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo khóa";
+            // 
+            // btn_OpenKey
+            // 
+            this.btn_OpenKey.Location = new System.Drawing.Point(7, 383);
+            this.btn_OpenKey.Name = "btn_OpenKey";
+            this.btn_OpenKey.Size = new System.Drawing.Size(131, 40);
+            this.btn_OpenKey.TabIndex = 10;
+            this.btn_OpenKey.Text = "Import Key";
+            this.btn_OpenKey.UseVisualStyleBackColor = true;
+            this.btn_OpenKey.Click += new System.EventHandler(this.btn_OpenKey_Click);
+            // 
+            // btn_ExportKey
+            // 
+            this.btn_ExportKey.BackColor = System.Drawing.Color.Gold;
+            this.btn_ExportKey.Location = new System.Drawing.Point(144, 383);
+            this.btn_ExportKey.Name = "btn_ExportKey";
+            this.btn_ExportKey.Size = new System.Drawing.Size(128, 40);
+            this.btn_ExportKey.TabIndex = 9;
+            this.btn_ExportKey.Text = "Export Key";
+            this.btn_ExportKey.UseVisualStyleBackColor = false;
+            this.btn_ExportKey.Click += new System.EventHandler(this.btn_SaveKey_Click);
+            // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Location = new System.Drawing.Point(144, 429);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(128, 41);
+            this.btn_Reset.TabIndex = 8;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
+            // btn_New
+            // 
+            this.btn_New.Location = new System.Drawing.Point(6, 429);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(132, 41);
+            this.btn_New.TabIndex = 8;
+            this.btn_New.Text = "New";
+            this.btn_New.UseVisualStyleBackColor = true;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
             // 
             // tbx_phiN
             // 
@@ -719,28 +740,6 @@ namespace Vigenere_Cipher
             this.label9.Text = "p = ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // btn_ExportKey
-            // 
-            this.btn_ExportKey.BackColor = System.Drawing.Color.Gold;
-            this.btn_ExportKey.Location = new System.Drawing.Point(144, 383);
-            this.btn_ExportKey.Name = "btn_ExportKey";
-            this.btn_ExportKey.Size = new System.Drawing.Size(128, 40);
-            this.btn_ExportKey.TabIndex = 9;
-            this.btn_ExportKey.Text = "Export Key";
-            this.btn_ExportKey.UseVisualStyleBackColor = false;
-            this.btn_ExportKey.Click += new System.EventHandler(this.btn_SaveKey_Click);
-            // 
-            // btn_ImportKey
-            // 
-            this.btn_ImportKey.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_ImportKey.Location = new System.Drawing.Point(6, 383);
-            this.btn_ImportKey.Name = "btn_ImportKey";
-            this.btn_ImportKey.Size = new System.Drawing.Size(132, 40);
-            this.btn_ImportKey.TabIndex = 9;
-            this.btn_ImportKey.Text = "Import Key";
-            this.btn_ImportKey.UseVisualStyleBackColor = false;
-            this.btn_ImportKey.Click += new System.EventHandler(this.btn_SaveKey_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -833,7 +832,7 @@ namespace Vigenere_Cipher
         private System.Windows.Forms.TextBox tbx_BangMaHoa2;
         private System.Windows.Forms.TextBox tbx_BangRo;
         private System.Windows.Forms.Button btn_ExportKey;
-        private System.Windows.Forms.Button btn_ImportKey;
+        private System.Windows.Forms.Button btn_OpenKey;
     }
 }
 
